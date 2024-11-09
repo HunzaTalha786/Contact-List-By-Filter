@@ -8,7 +8,7 @@ body {
 
 #container {
     width: 90%;
-    max-width: 800px; /* Maximum width for larger screens */
+    max-width: 800px; 
     margin: auto;
     overflow: hidden;
 }
@@ -16,6 +16,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .contact-list {
@@ -31,14 +32,14 @@ h1 {
     border-radius: 5px;
     padding: 15px;
     margin: 10px;
-    width: 100%; /* Full width on small screens */
+    width: 100%; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s; /* Smooth hover effect */
+    transition: transform 0.2s; 
     color: #383838;
 }
 
 .contact:hover {
-    transform: scale(1.02); /* Scale effect on hover */
+    transform: scale(1.02); 
     background-color: rgb(150, 202, 204);
     cursor: pointer;
     color:#fff
@@ -46,8 +47,8 @@ h1 {
 
 input {
     padding: 10px;
-    width: calc(100% - 120px); /* Responsive width calculation */
-    max-width: 200px; /* Limit max width */
+    width: calc(100% - 120px); 
+    max-width: 200px; 
     margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -63,28 +64,47 @@ button {
 }
 
 button:hover {
-    background-color:rgb(49, 83, 83); /* Darker shade on hover */
+    background-color:rgb(49, 83, 83); 
 }
 
-/* Responsive Styles */
+body{
+    animation: transitionIn 1s;
+}
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+
+
+    }
+
+}
+
+
+
 @media (max-width: 600px) {
     .contact {
-        width: 100%; /* Full width for small screens */
-        margin: 5px 0; /* Less margin on small screens */
+        width: 100%; 
+        margin: 5px 0; 
     }
 
     input {
-        width: calc(100% - 20px); /* Adjust input field width */
-        margin-right: 0; /* Remove right margin */
+        width: calc(100% - 20px); 
+        margin-right: 0; 
     }
 
     button {
-        width: 100%; /* Button full width on small screens */
-        margin-top: 10px; /* Spacing above button */
+        width: 100%; 
+        margin-top: 10px; 
     }
 
     h1 {
-        font-size: 1.5em; /* Smaller heading on small screens */
+        font-size: 1.5em; 
     }
 }
 
@@ -93,6 +113,6 @@ button:hover {
         width: 100%}
 
     button {
-        width: auto; /* Default width for buttons on medium screens */
+        width: auto; 
     }
 }
